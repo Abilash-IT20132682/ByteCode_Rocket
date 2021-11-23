@@ -8,3 +8,5 @@
 ### Member 4 - AISHWARYA.K
 
 #### Brief Description of Project - This web application was created for the SpaceHack 2021 competition.
+
+<img src="Basci/img/rocket.png"/>
