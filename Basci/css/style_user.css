@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+.right{
+    text-align: right;
+    position: fixed;
+  bottom: 48px;
+  left: 536px;
+  font-size: 18px;
+    
+}
+.user{
+    height: 12%;
+    width: 12%;
+}
+
+
+.left{
+    text-align: left;
+    position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+    
+}
+.home{
+    height: 25%;
+    width: 25%;
+    top: 70%;
+    bottom: 30%;
+    margin-left: 0%;
+}
+.wrapper{
+	background: url(../img/user2.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+    
+}
+
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 50%;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.932);
+}
+.navbar .logo{
+	width: 90px;
+	height: 80px;
+	padding: 20px 90px;
+	-webkit-transition: -webkit-transform 1s;
+}
+.navbar .logo:hover{
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgba(255, 230, 0, 0.863);
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: fixed;
+	left: 75%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: pointer;
+}
+.center h1{
+	color: rgb(253, 253, 253);
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: white;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center .buttons{
+	margin: 765px -230px;
+	
+}
+
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #4668ff;
+	background: rgb(3, 3, 3);
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #000000;
+	border-radius: 25px;
+	transition: .4s;
+	position: top;
+	margin-top: 700px 160px;
+	
+	-webkit-transition: -webkit-transform 1s;
+}
+
+.buttons button:hover{
+	background: #02d2e0;
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+
+.push button{
+  height: 25px;
+	width: 100px;
+	font-size: 18px;
+	font-weight: 600;
+  text-align: center;
+	color: #111111;
+	background: rgb(105, 103, 103);
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #615f5f;
+	border-radius: 25px;
+	transition: .4s;
+	position: absolute;
+	margin: 0px 70px;
+	
+    float: right;
+}
+
+.push button:hover{
+    background: #dce002e0;
+}
+
+.button1 button {
+    
+	background-color: hsl(202, 25%, 52%);
+    color: hsl(260, 85%, 97%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.2rem;
+    border: 1px solid hsl(197, 49%, 58%);
+    border-radius: 0.35rem;
+    cursor: pointer;
+	margin-bottom: 10px;
+    margin: 140px 0px;
+  }
+  
+  button:hover {
+    animation-name: shine;
+    animation-duration: 260ms;
+  }
+  
+  @keyframes shine {
+    0% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 85%, 95%) 0%, 
+        hsl(278, 50%, 49%) 25%
+      );
+    }
+  
+    25% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 25%, 
+        hsl(260, 90%, 40%) 50%);
+    }
+  
+    50% {
+      background: linear-gradient(
+        30deg,
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 50%, 
+        hsl(260, 90%, 40%) 75%); 
+    }
+  
+    75% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 75%, 
+        hsl(260, 90%, 40%) 100%); 
+    }
+  
+    100% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 100%); 
+    }
+  }
+  .button2 button{
+	background-color: hsla(260, 41%, 54%, 0.521);
+    color: hsl(260, 85%, 97%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.2rem;
+    border: 1px solid hsla(260, 47%, 55%, 0.411);
+    border-radius: 0.35rem;
+    cursor: pointer;
+    margin: -584px 0px;
+  }
+  
+
+

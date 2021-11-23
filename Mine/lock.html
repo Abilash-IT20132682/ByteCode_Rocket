@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Lock/Unlock with Voice (Chrome Only)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/lock.css">
+
+</head>
+<body>
+
+  <!--Home--->
+<div class="wrapper">
+	<a href="../Basci/html/index.html" class="button">
+		<span class="button__text">
+			<span> Home</span>
+		</span>
+	</a>
+</div>
+<!-- partial:index.partial.html -->
+<!-- 
+
+Please enable your microphone.
+
+Please close any other tabs/windows containing speech API projects, even if only showing the preview window. 
+
+-->
+
+<h1>Say :<br><span>'Unlock'</span> <span>to open the Quiz!!</span></h1>
+<h2>(or just click the padlock 🔒)</h2>
+
+<div class="padlock">
+    <div class="keyhole"></div>
+</div>
+
+<p class="heard">Heard: <span class="heard-output">nothing</span></p>
+<!-- partial -->
+  <script  src="js/lock.js"></script>
+
+</body>
+</html>

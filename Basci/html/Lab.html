@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+    <!-- <title>Responsive Sidebar Menu</title> -->
+    <link rel="stylesheet" href="../css/style_lab.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<title> Lab </title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+
+.wrapper{
+	
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 82%;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.4);
+}
+.navbar .logo{
+	width: 140px;
+	height: 100px;
+	padding: 20px 100px;
+	-webkit-transition: -webkit-transform 1s;
+}
+.navbar .logo:hover{
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgba(27, 157, 197, 0.658);
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+
+.center .buttons{
+	margin: 35px 280px;
+	
+}
+
+.column {
+  float: left;
+  width: 65%;
+  padding: 65px;
+}
+
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffb3b3;
+	background: red;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #cc0000;
+	border-radius: 25px;
+	transition: .4s;
+	position: center;
+	-webkit-transition: -webkit-transform 1s;
+}
+
+.buttons button:hover{
+	background: #cc0000;
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1
+{
+  color:#fdffff;
+  text-align: center;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("../img/lab.jpg");
+
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: relatives;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+/* Add styles to the form container */
+.container {
+    width: 580px;
+    height: 500px;
+  position: fixed;
+  right: 0;
+  margin: 100px 500px;
+  max-width: 550px;
+  padding: 40px;
+  background-color: rgba(177, 174, 174, 0.5);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6f;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+select{
+	width: 80%;
+	border: 1px solid brown;
+	border-radius: 05px;
+	box-shadow:1px 1px 2px 1px grey;
+	padding: 10px 15px 10px;
+}
+.txt{
+width: 60%;
+height: 5%;
+border: 1px solid brown;
+border-radius: 05px;
+padding:20px 15px 20px 15px;
+margin: 10px 0px 15px 0px;
+}
+
+.button2 button{
+	background-color: hsla(260, 41%, 54%, 0.521);
+    color: hsl(260, 85%, 97%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.2rem;
+    border: 1px solid hsla(260, 47%, 55%, 0.411);
+    border-radius: 0.35rem;
+    cursor: pointer;
+    margin: -504px 40px;
+  }
+  button:hover {
+    animation-name: shine;
+    animation-duration: 260ms;
+  }
+  
+  @keyframes shine {
+    0% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 85%, 95%) 0%, 
+        hsl(278, 50%, 49%) 25%
+      );
+    }
+  
+    25% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 25%, 
+        hsl(260, 90%, 40%) 50%);
+    }
+  
+    50% {
+      background: linear-gradient(
+        30deg,
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 50%, 
+        hsl(260, 90%, 40%) 75%); 
+    }
+  
+    75% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 75%, 
+        hsl(260, 90%, 40%) 100%); 
+    }
+  
+    100% {
+      background: linear-gradient(
+        30deg, 
+        hsl(260, 90%, 40%) 0%, 
+        hsl(260, 85%, 95%) 100%); 
+    }
+  }
+
+  .push button{
+    height: 25px;
+	width: 100px;
+	font-size: 18px;
+	font-weight: 600;
+    text-align: center;
+	color: #111111;
+	background: rgb(105, 103, 103);
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #615f5f;
+	border-radius: 25px;
+	transition: .4s;
+	position: center;
+	
+	
+    float: right;
+}
+
+.push button:hover{
+    background: #dce002e0;
+}
+
+
+      </style>
+
+
+</style>
+</head>
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Show</header>
+      <a href="Lab.html" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Lab</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-rocket" aria-hidden="true"></i>
+        <span>Apps</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-child" aria-hidden="true"></i>
+        <span>Avatar</span>
+      </a>
+      <a href="../../Mine/lock.html">
+        <i class="fa fa-trophy" aria-hidden="true"></i>
+        <span>Challenge</span>
+      </a>
+      <a href="../../Mine/profile.html">
+        <i class="far fa-question-circle"></i>
+        <span>Status</span>
+      </a>
+      <a href="../../Mine/myProfile.html">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span>Profile</span>
+      </a>
+      <a href="../../Mine/sBoard.html">
+        <i class="fa fa-minus-square" aria-hidden="true"></i>
+        <span>Score</span>
+      </a>
+    </div>
+
+
+<div class="wrapper">
+
+    
+      
+      <nav class="navbar">
+        
+
+        
+        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+        <h1 style="float:left;font-family:OCR A Std, monospace;font-size:50px;color:#e8135a;"></h1>
+        <ul>
+          
+          <li><a href="user.html">Home</a></li>
+          <li><a href="../../Mine/course.html">Course</a></li>
+          <li><a class="active" href="Lab.html">Lab</a></li>
+          <li><a href="../../Mine/apps.html">Apps</a></li>
+          <li><a href="#">Avatar</a></li>
+         
+         
+          
+          <li><a href="../html/index.html">Log-out</a></li>
+        </ul>
+      </nav>
+</div>
+
+
+
+
+
+
+<div class="bg-img">
+<div class="row">
+    <div class="column">
+      <img src="../img/rocket.png" alt="Snow" style="width:8%" >
+    </div>
+
+
+
+
+
+
+<p>
+
+
+    <form method="post" class="container">
+
+
+<h1>Lab</h1>
+<img src="../img/rocket.png" alt="Computer man" style="width:48px;height:48px; align-content: center; color: rgba(0, 0, 0, 0.384);">
+<br> <br> <br> <br>
+
+
+
+<div class="button2">
+    <button>Basic</button>
+    <button>Videos</button>
+    <br> <br> <br> <br> <br> <br>
+    <button>Labsheet</button>
+    <button>Tutorial</button>
+    <br> <br> <br> <br> <br> <br>
+    <button>Library</button>
+    <button>Ref-Books</button>
+
+
+</div>
+
+   
+</select><br> 
+   
+</p>
+     <p>
+    
+
+
+
+ 
+</select>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</select>
+</P>
+</p>
+
+  
+  
+</p>  
+  </form>
+</p>
+</div>
+
+
+</body>
+</html>
+
+	

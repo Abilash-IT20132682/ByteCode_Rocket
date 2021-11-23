@@ -1,0 +1,440 @@
+html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image:url(../img/14.jpg);
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+.wrapper {
+	height: 200px;
+	display: flex;
+	left:90px;
+	margin-top:35px;
+  padding-left: 10px;
+}
+.button {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+.button:before,
+.button:after {
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 2px solid red;
+	top: -10px;
+	left: 50%;
+	z-index: 1;
+	margin-left: -40px;
+	transition: all 1s ease 0s;
+}
+.button:before {
+	animation: rotate 20s infinite linear;
+}
+.button:after {
+	animation: rotate 25s infinite linear;
+}
+.button__text {
+	position: relative;
+	height: 70px;
+  width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 50px;
+	border-radius: 50px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.3);
+	letter-spacing: 10px;
+	transition: all 0.8s ease 0s;
+	top: 0;
+	overflow: hidden;
+}
+.button__text:before,
+.button__text:after {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: #eee;
+	transition: all 0.8s ease 0s;
+}
+.button__text:before {
+	left: 0;
+	z-index: 2;
+}
+.button__text:after {
+	right: 0;
+}
+.button__text span {
+	position: relative;
+	z-index: 2;
+}
+.button:hover:before,
+.button:hover:after {
+	left: 100%;
+	opacity: 0;
+}
+.button:hover .button__text {
+	top: -10px;
+	color: #ffff;
+	transition: all 0.8s ease 0s;
+	box-shadow: linear-gradient(360deg, transparent, #03e9f4);
+}
+.button:hover .button__text:before,
+.button:hover .button__text:after {
+	background: linear-gradient(360deg, transparent, #03e9f4);
+}
+.button:hover .button__text:before {
+	width: 100%;
+}
+.button:active .button__text {
+	top: -7px;
+	transition: all 0.1s ease 0s;
+	box-shadow: linear-gradient(360deg, transparent, #03e9f4);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.ag-star {
+  height: 4.0625em;
+  width: 3.75em;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-star/images/star.png) no-repeat center;
+  background-size: contain;
+
+  z-index: 1;
+  position: absolute;
+
+  -webkit-animation: an-star 2s 2s linear infinite;
+  -moz-animation: an-star 2s 2s linear infinite;
+  -o-animation: an-star 2s 2s linear infinite;
+  animation: an-star 2s 2s linear infinite;
+
+  image-rendering: optimize-contrast;
+}
+.ag-star-1 {
+  top: 10em;
+  left: 10em;
+
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.ag-star-2 {
+  top: 15%;
+  left: 20%;
+
+  -webkit-animation-delay: 14s;
+  -moz-animation-delay: 14s;
+  -o-animation-delay: 14s;
+  animation-delay: 14s;
+}
+.ag-star-3 {
+  top: 20%;
+  right: 40%;
+
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  -o-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.ag-star-4 {
+  top: 50%;
+  right: 10.625em;
+
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+.ag-star-5 {
+  top: 5em;
+  right: 50em;
+}
+
+@-webkit-keyframes an-star {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(0deg);
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5) rotate(180deg);
+    transform: scale(0.5, 0.5) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(360deg);
+    transform: scale(1, 1) rotate(360deg);
+  }
+}
+@-moz-keyframes an-star {
+  0% {
+    -moz-transform: scale(1, 1) rotate(0deg);
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    -moz-transform: scale(0.5, 0.5) rotate(180deg);
+    transform: scale(0.5, 0.5) rotate(180deg);
+  }
+  100% {
+    -moz-transform: scale(1, 1) rotate(360deg);
+    transform: scale(1, 1) rotate(360deg);
+  }
+}
+@-o-keyframes an-star {
+  0% {
+    -o-transform: scale(1, 1) rotate(0deg);
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    -o-transform: scale(0.5, 0.5) rotate(180deg);
+    transform: scale(0.5, 0.5) rotate(180deg);
+  }
+  100% {
+    -o-transform: scale(1, 1) rotate(360deg);
+    transform: scale(1, 1) rotate(360deg);
+  }
+}
+@keyframes an-star {
+  0% {
+    -webkit-transform: scale(1, 1) rotate(0deg);
+    -moz-transform: scale(1, 1) rotate(0deg);
+    -o-transform: scale(1, 1) rotate(0deg);
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5) rotate(180deg);
+    -moz-transform: scale(0.5, 0.5) rotate(180deg);
+    -o-transform: scale(0.5, 0.5) rotate(180deg);
+    transform: scale(0.5, 0.5) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) rotate(360deg);
+    -moz-transform: scale(1, 1) rotate(360deg);
+    -o-transform: scale(1, 1) rotate(360deg);
+    transform: scale(1, 1) rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}
+
+
